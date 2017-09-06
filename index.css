@@ -8,7 +8,7 @@ li {
 }
 
 * {
-    /* outline: 1px solid #ddd; */
+    outline: 1px solid #ddd;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -322,6 +322,7 @@ background-size: cover;
 .clients .i {
     line-height: 120px;
     text-align: center;
+    display: inline-block;
 }
 
 .clients .i img {
