@@ -320,8 +320,13 @@ background-size: cover;
 }
 
 .clients .i {
+    height: 120px;
     line-height: 120px;
     text-align: center;
+}
+
+.clients .i>a {
+    height: 100%;
     display: inline-block;
 }
 
@@ -329,11 +334,7 @@ background-size: cover;
     max-width: 135px;
     filter: grayscale(100%);
     transition: 0.3s ease;
-    vertical-align: middle;
-}
-
-img {
-    vertical-align: middle;
+    display: inline-block;
 }
 
 .clients .i img:hover {
