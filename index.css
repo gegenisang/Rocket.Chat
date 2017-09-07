@@ -2,9 +2,21 @@ div,
 nav,
 a,
 ul,
-li {
+li,
+span,
+img,
+h3,
+h4,
+h5,
+p,
+i {
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.6rem;
 }
 
 * {
@@ -188,6 +200,7 @@ a {
     width: 100%;
     color: #fff;
     margin: 0 auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 #box .wrap h2 {
@@ -207,6 +220,15 @@ a {
 
 .index-page .section {
     padding: 75px 0 95px;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+}
+
+.section p {
+    margin-bottom: 25px;
+    line-height: 24px;
 }
 
 .i .icon {
@@ -235,8 +257,50 @@ a {
     background-size: contain;
 }
 
+.features i h3 {
+    font-weight: bold;
+    margin: 15px auto;
+}
+
+.features i p {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 .section.gray {
     background-color: #f2f1f0;
+}
+
+.gray .icon {
+    width: 103px;
+    height: 103px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.gray .icon.ss-livechat {
+    background-image: url(img/helpdesk.svg);
+    background-size: contain;
+}
+
+.gray .icon.ss-videoconferencing {
+    background-image: url(img/videoconference.svg);
+    background-size: contain;
+}
+
+.gray .icon.ss-filesharing {
+    background-image: url(img/filesharing.svg);
+    background-size: contain;
+}
+
+.gray .icon.ss-texmath {
+    background-image: url(img/api.svg);
+    background-size: contain;
+}
+
+.gray .icon.ss-screensharing {
+    background-image: url(img/nativeapplications.svg);
+    background-size: contain;
 }
 
 .nav-pills ul {
@@ -253,28 +317,82 @@ a {
     position: relative;
 }
 
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+    color: #337ab7;
+    background-color: #f2f1f0;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+
+.nav>li>a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hoverClass {
+    position: relative;
+}
+
+.hoverClass:before,
+.hoverClass:after {
+    display: inline-block;
+    -webkit-transition: all 0.3s ease;
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+}
+
+.hoverClass:before {
+    content: "[";
+    left: -10px;
+}
+
+.hoverClass:after {
+    content: "]";
+    right: 0px;
+}
+
+.hoverClass:hover:before,
+.hoverClass.active:before {
+    left: 3px;
+}
+
+.hoverClass:hover:after,
+.hoverClass.active:after {
+    right: 3px;
+}
+
+.hoverClass:hover:before,
+.hoverClass.active:before,
+.hoverClass:hover:after,
+.hoverClass.active:after {
+    opacity: 1;
+}
+
 .img-responsive {
     display: block;
     min-width: 100%;
     height: auto;
 }
 
+.tab-content .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3.5% 15.6% 0 15.6%;
+}
 
-/* .tabpanel {
+.tab-content .image img {
     width: 100%;
     height: 100%;
 }
-
-.tabpanel #livechat {
-    background-image: url(img/livechat.jpg);
-    background-repeat: no-repeat;
-    /* background-clip: border-box; */
-
-
-/* background-position: center;
-background-size: cover;
-
-} */
 
 .awards {
     background-color: #319ac6;
@@ -312,6 +430,25 @@ background-size: cover;
     display: block;
     width: 170px;
     margin: 5px auto;
+}
+
+.testimonials h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 12px;
+}
+
+.testimonials h4 {
+    font-size: 1.4rem;
+    color: #8c8c8c;
+    font-weight: bold;
+    margin: 12px 0 20px;
+}
+
+.testimonials p {
+    font-size: 2rem;
+    line-height: 32px;
 }
 
 .clients {
